@@ -1196,6 +1196,12 @@
                             </textField>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="APIkeyField" destination="QYs-he-4KH" id="u1y-8o-cE3"/>
+                        <outlet property="UIDkeyField" destination="Afr-dI-EuW" id="44D-Id-DtO"/>
+                        <outlet property="numEmailField" destination="15c-GL-tEY" id="RnJ-u5-v1Q"/>
+                        <outlet property="sdf" destination="su7-mA-hgV" id="UEj-iE-rcZ"/>
+                    </connections>
                 </viewController>
                 <customObject id="R7K-I6-eKo" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
