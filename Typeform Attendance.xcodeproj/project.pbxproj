@@ -14,6 +14,12 @@
 		57AB68181CF00B6600401ADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57AB68161CF00B6600401ADD /* Main.storyboard */; };
 		57AB68231CF00B6600401ADD /* Typeform_AttendanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AB68221CF00B6600401ADD /* Typeform_AttendanceTests.swift */; };
 		57AB682E1CF00B6600401ADD /* Typeform_AttendanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AB682D1CF00B6600401ADD /* Typeform_AttendanceUITests.swift */; };
+		57AC04EC1CF1120600AA72AE /* Answers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AC04E61CF1120500AA72AE /* Answers.swift */; };
+		57AC04ED1CF1120600AA72AE /* Json4Swift_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AC04E71CF1120500AA72AE /* Json4Swift_Base.swift */; };
+		57AC04EE1CF1120600AA72AE /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AC04E81CF1120500AA72AE /* Metadata.swift */; };
+		57AC04EF1CF1120600AA72AE /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AC04E91CF1120500AA72AE /* Questions.swift */; };
+		57AC04F01CF1120600AA72AE /* Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AC04EA1CF1120500AA72AE /* Responses.swift */; };
+		57AC04F11CF1120600AA72AE /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AC04EB1CF1120500AA72AE /* Stats.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		57AB68291CF00B6600401ADD /* Typeform AttendanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Typeform AttendanceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57AB682D1CF00B6600401ADD /* Typeform_AttendanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typeform_AttendanceUITests.swift; sourceTree = "<group>"; };
 		57AB682F1CF00B6600401ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57AC04E61CF1120500AA72AE /* Answers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Answers.swift; path = ../../../../../Downloads/codegen_5740d9c2101fa/Answers.swift; sourceTree = "<group>"; };
+		57AC04E71CF1120500AA72AE /* Json4Swift_Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Json4Swift_Base.swift; path = ../../../../../Downloads/codegen_5740d9c2101fa/Json4Swift_Base.swift; sourceTree = "<group>"; };
+		57AC04E81CF1120500AA72AE /* Metadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Metadata.swift; path = ../../../../../Downloads/codegen_5740d9c2101fa/Metadata.swift; sourceTree = "<group>"; };
+		57AC04E91CF1120500AA72AE /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Questions.swift; path = ../../../../../Downloads/codegen_5740d9c2101fa/Questions.swift; sourceTree = "<group>"; };
+		57AC04EA1CF1120500AA72AE /* Responses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Responses.swift; path = ../../../../../Downloads/codegen_5740d9c2101fa/Responses.swift; sourceTree = "<group>"; };
+		57AC04EB1CF1120500AA72AE /* Stats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stats.swift; path = ../../../../../Downloads/codegen_5740d9c2101fa/Stats.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,12 @@
 		57AB680F1CF00B6600401ADD /* Typeform Attendance */ = {
 			isa = PBXGroup;
 			children = (
+				57AC04E61CF1120500AA72AE /* Answers.swift */,
+				57AC04E71CF1120500AA72AE /* Json4Swift_Base.swift */,
+				57AC04E81CF1120500AA72AE /* Metadata.swift */,
+				57AC04E91CF1120500AA72AE /* Questions.swift */,
+				57AC04EA1CF1120500AA72AE /* Responses.swift */,
+				57AC04EB1CF1120500AA72AE /* Stats.swift */,
 				57AB68101CF00B6600401ADD /* AppDelegate.swift */,
 				57AB68121CF00B6600401ADD /* ViewController.swift */,
 				57A2B24C1CF0293400004D5B /* Main.swift */,
@@ -256,8 +274,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				57A2B24D1CF0293400004D5B /* Main.swift in Sources */,
+				57AC04F11CF1120600AA72AE /* Stats.swift in Sources */,
 				57AB68131CF00B6600401ADD /* ViewController.swift in Sources */,
 				57AB68111CF00B6600401ADD /* AppDelegate.swift in Sources */,
+				57AC04EF1CF1120600AA72AE /* Questions.swift in Sources */,
+				57AC04F01CF1120600AA72AE /* Responses.swift in Sources */,
+				57AC04ED1CF1120600AA72AE /* Json4Swift_Base.swift in Sources */,
+				57AC04EE1CF1120600AA72AE /* Metadata.swift in Sources */,
+				57AC04EC1CF1120600AA72AE /* Answers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
