@@ -12,6 +12,7 @@ class Main{
     static var APIkey = ""
     static var UIDkey = ""
     static var numEmailPerPage = 50
+    static var rootObject: Json4Swift_Base! = Json4Swift_Base(dictionary: NSDictionary())
     
     static func newAPI(API: String){
         APIkey = API
