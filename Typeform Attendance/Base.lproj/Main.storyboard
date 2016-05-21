@@ -696,7 +696,7 @@
         <!--View Controller-->
         <scene sceneID="YpR-8u-kMN">
             <objects>
-                <viewController id="stI-Gx-7zI" sceneMemberID="viewController">
+                <viewController id="stI-Gx-7zI" customClass="ViewController" customModule="Typeform_Attendance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="2XD-36-v6v">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -739,9 +739,15 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system" size="17"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="refreshButtonPressed:" target="stI-Gx-7zI" id="7fF-Bo-Lxb"/>
+                                </connections>
                             </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="refreshDate" destination="K2k-1q-gzk" id="7kr-sU-373"/>
+                    </connections>
                 </viewController>
                 <customObject id="O2z-tH-Wng" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -782,7 +788,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="iK6-nI-x4X">
-                                                            <rect key="frame" x="1" y="1" width="71" height="17"/>
+                                                            <rect key="frame" x="1" y="1" width="72" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZQ-tn-JX0">
@@ -864,7 +870,7 @@
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn width="181" minWidth="40" maxWidth="1000" id="jvN-3y-ABD">
+                                                <tableColumn width="180.5" minWidth="40" maxWidth="1000" id="jvN-3y-ABD">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Email">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -902,7 +908,7 @@
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="ltY-rG-Vb4">
-                                    <rect key="frame" x="1" y="283" width="448" height="16"/>
+                                    <rect key="frame" x="1" y="7" width="0.0" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="aXD-qj-lIU">
@@ -1047,7 +1053,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="CXZ-rY-KX2">
-                                                            <rect key="frame" x="79" y="1" width="80" height="17"/>
+                                                            <rect key="frame" x="79" y="1" width="81" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="llO-2B-a4x">
@@ -1103,7 +1109,7 @@
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="u9O-TG-ZHr">
-                                    <rect key="frame" x="1" y="245" width="448" height="16"/>
+                                    <rect key="frame" x="1" y="7" width="0.0" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="3Xx-j9-9SI">
@@ -1125,7 +1131,7 @@
         <!--View Controller-->
         <scene sceneID="gsE-Pa-2AS">
             <objects>
-                <viewController id="9FA-nY-ziK" sceneMemberID="viewController">
+                <viewController id="9FA-nY-ziK" customClass="ViewController" customModule="Typeform_Attendance" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="qSd-iT-P11">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1161,6 +1167,9 @@
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <action selector="uidKeyChanged:" target="9FA-nY-ziK" id="fCc-CU-twD"/>
+                                </connections>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="15c-GL-tEY">
                                 <rect key="frame" x="207" y="163" width="36" height="22"/>
@@ -1170,6 +1179,9 @@
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <action selector="numEmailChanged:" target="9FA-nY-ziK" id="DSQ-XM-HME"/>
+                                </connections>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QYs-he-4KH">
                                 <rect key="frame" x="88" y="228" width="332" height="22"/>
@@ -1178,6 +1190,9 @@
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <action selector="apiKeyChanged:" target="9FA-nY-ziK" id="eCb-2f-L6f"/>
+                                </connections>
                             </textField>
                         </subviews>
                     </view>

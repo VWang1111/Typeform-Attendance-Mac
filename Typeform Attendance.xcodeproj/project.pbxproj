@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57A2B24D1CF0293400004D5B /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A2B24C1CF0293400004D5B /* Main.swift */; };
 		57AB68111CF00B6600401ADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AB68101CF00B6600401ADD /* AppDelegate.swift */; };
 		57AB68131CF00B6600401ADD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AB68121CF00B6600401ADD /* ViewController.swift */; };
 		57AB68151CF00B6600401ADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57AB68141CF00B6600401ADD /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57A2B24C1CF0293400004D5B /* Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		57AB680D1CF00B6600401ADD /* Typeform Attendance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Typeform Attendance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57AB68101CF00B6600401ADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57AB68121CF00B6600401ADD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				57AB68101CF00B6600401ADD /* AppDelegate.swift */,
 				57AB68121CF00B6600401ADD /* ViewController.swift */,
+				57A2B24C1CF0293400004D5B /* Main.swift */,
 				57AB68141CF00B6600401ADD /* Assets.xcassets */,
 				57AB68161CF00B6600401ADD /* Main.storyboard */,
 				57AB68191CF00B6600401ADD /* Info.plist */,
@@ -252,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57A2B24D1CF0293400004D5B /* Main.swift in Sources */,
 				57AB68131CF00B6600401ADD /* ViewController.swift in Sources */,
 				57AB68111CF00B6600401ADD /* AppDelegate.swift in Sources */,
 			);
@@ -475,6 +479,7 @@
 				57AB68341CF00B6600401ADD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57AB68351CF00B6600401ADD /* Build configuration list for PBXNativeTarget "Typeform AttendanceTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +488,7 @@
 				57AB68371CF00B6600401ADD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57AB68381CF00B6600401ADD /* Build configuration list for PBXNativeTarget "Typeform AttendanceUITests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +497,7 @@
 				57AB683A1CF00B6600401ADD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
