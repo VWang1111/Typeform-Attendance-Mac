@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		57AB68111CF00B6600401ADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AB68101CF00B6600401ADD /* AppDelegate.swift */; };
+		57AB68131CF00B6600401ADD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AB68121CF00B6600401ADD /* ViewController.swift */; };
+		57AB68151CF00B6600401ADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57AB68141CF00B6600401ADD /* Assets.xcassets */; };
+		57AB68181CF00B6600401ADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57AB68161CF00B6600401ADD /* Main.storyboard */; };
+		57AB68231CF00B6600401ADD /* Typeform_AttendanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AB68221CF00B6600401ADD /* Typeform_AttendanceTests.swift */; };
+		57AB682E1CF00B6600401ADD /* Typeform_AttendanceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AB682D1CF00B6600401ADD /* Typeform_AttendanceUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		57AB681F1CF00B6600401ADD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57AB68051CF00B6600401ADD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57AB680C1CF00B6600401ADD;
+			remoteInfo = "Typeform Attendance";
+		};
+		57AB682A1CF00B6600401ADD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57AB68051CF00B6600401ADD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57AB680C1CF00B6600401ADD;
+			remoteInfo = "Typeform Attendance";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		57AB680D1CF00B6600401ADD /* Typeform Attendance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Typeform Attendance.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57AB68101CF00B6600401ADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		57AB68121CF00B6600401ADD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		57AB68141CF00B6600401ADD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		57AB68171CF00B6600401ADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		57AB68191CF00B6600401ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57AB681E1CF00B6600401ADD /* Typeform AttendanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Typeform AttendanceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57AB68221CF00B6600401ADD /* Typeform_AttendanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typeform_AttendanceTests.swift; sourceTree = "<group>"; };
+		57AB68241CF00B6600401ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57AB68291CF00B6600401ADD /* Typeform AttendanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Typeform AttendanceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57AB682D1CF00B6600401ADD /* Typeform_AttendanceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typeform_AttendanceUITests.swift; sourceTree = "<group>"; };
+		57AB682F1CF00B6600401ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		57AB680A1CF00B6600401ADD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57AB681B1CF00B6600401ADD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57AB68261CF00B6600401ADD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		57AB68041CF00B6600401ADD = {
+			isa = PBXGroup;
+			children = (
+				57AB680F1CF00B6600401ADD /* Typeform Attendance */,
+				57AB68211CF00B6600401ADD /* Typeform AttendanceTests */,
+				57AB682C1CF00B6600401ADD /* Typeform AttendanceUITests */,
+				57AB680E1CF00B6600401ADD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		57AB680E1CF00B6600401ADD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				57AB680D1CF00B6600401ADD /* Typeform Attendance.app */,
+				57AB681E1CF00B6600401ADD /* Typeform AttendanceTests.xctest */,
+				57AB68291CF00B6600401ADD /* Typeform AttendanceUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		57AB680F1CF00B6600401ADD /* Typeform Attendance */ = {
+			isa = PBXGroup;
+			children = (
+				57AB68101CF00B6600401ADD /* AppDelegate.swift */,
+				57AB68121CF00B6600401ADD /* ViewController.swift */,
+				57AB68141CF00B6600401ADD /* Assets.xcassets */,
+				57AB68161CF00B6600401ADD /* Main.storyboard */,
+				57AB68191CF00B6600401ADD /* Info.plist */,
+			);
+			path = "Typeform Attendance";
+			sourceTree = "<group>";
+		};
+		57AB68211CF00B6600401ADD /* Typeform AttendanceTests */ = {
+			isa = PBXGroup;
+			children = (
+				57AB68221CF00B6600401ADD /* Typeform_AttendanceTests.swift */,
+				57AB68241CF00B6600401ADD /* Info.plist */,
+			);
+			path = "Typeform AttendanceTests";
+			sourceTree = "<group>";
+		};
+		57AB682C1CF00B6600401ADD /* Typeform AttendanceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				57AB682D1CF00B6600401ADD /* Typeform_AttendanceUITests.swift */,
+				57AB682F1CF00B6600401ADD /* Info.plist */,
+			);
+			path = "Typeform AttendanceUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		57AB680C1CF00B6600401ADD /* Typeform Attendance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57AB68321CF00B6600401ADD /* Build configuration list for PBXNativeTarget "Typeform Attendance" */;
+			buildPhases = (
+				57AB68091CF00B6600401ADD /* Sources */,
+				57AB680A1CF00B6600401ADD /* Frameworks */,
+				57AB680B1CF00B6600401ADD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Typeform Attendance";
+			productName = "Typeform Attendance";
+			productReference = 57AB680D1CF00B6600401ADD /* Typeform Attendance.app */;
+			productType = "com.apple.product-type.application";
+		};
+		57AB681D1CF00B6600401ADD /* Typeform AttendanceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57AB68351CF00B6600401ADD /* Build configuration list for PBXNativeTarget "Typeform AttendanceTests" */;
+			buildPhases = (
+				57AB681A1CF00B6600401ADD /* Sources */,
+				57AB681B1CF00B6600401ADD /* Frameworks */,
+				57AB681C1CF00B6600401ADD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57AB68201CF00B6600401ADD /* PBXTargetDependency */,
+			);
+			name = "Typeform AttendanceTests";
+			productName = "Typeform AttendanceTests";
+			productReference = 57AB681E1CF00B6600401ADD /* Typeform AttendanceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		57AB68281CF00B6600401ADD /* Typeform AttendanceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57AB68381CF00B6600401ADD /* Build configuration list for PBXNativeTarget "Typeform AttendanceUITests" */;
+			buildPhases = (
+				57AB68251CF00B6600401ADD /* Sources */,
+				57AB68261CF00B6600401ADD /* Frameworks */,
+				57AB68271CF00B6600401ADD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57AB682B1CF00B6600401ADD /* PBXTargetDependency */,
+			);
+			name = "Typeform AttendanceUITests";
+			productName = "Typeform AttendanceUITests";
+			productReference = 57AB68291CF00B6600401ADD /* Typeform AttendanceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		57AB68051CF00B6600401ADD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Victor Wang";
+				TargetAttributes = {
+					57AB680C1CF00B6600401ADD = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					57AB681D1CF00B6600401ADD = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 57AB680C1CF00B6600401ADD;
+					};
+					57AB68281CF00B6600401ADD = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 57AB680C1CF00B6600401ADD;
+					};
+				};
+			};
+			buildConfigurationList = 57AB68081CF00B6600401ADD /* Build configuration list for PBXProject "Typeform Attendance" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 57AB68041CF00B6600401ADD;
+			productRefGroup = 57AB680E1CF00B6600401ADD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				57AB680C1CF00B6600401ADD /* Typeform Attendance */,
+				57AB681D1CF00B6600401ADD /* Typeform AttendanceTests */,
+				57AB68281CF00B6600401ADD /* Typeform AttendanceUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		57AB680B1CF00B6600401ADD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57AB68151CF00B6600401ADD /* Assets.xcassets in Resources */,
+				57AB68181CF00B6600401ADD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57AB681C1CF00B6600401ADD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57AB68271CF00B6600401ADD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		57AB68091CF00B6600401ADD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57AB68131CF00B6600401ADD /* ViewController.swift in Sources */,
+				57AB68111CF00B6600401ADD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57AB681A1CF00B6600401ADD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57AB68231CF00B6600401ADD /* Typeform_AttendanceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57AB68251CF00B6600401ADD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57AB682E1CF00B6600401ADD /* Typeform_AttendanceUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		57AB68201CF00B6600401ADD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57AB680C1CF00B6600401ADD /* Typeform Attendance */;
+			targetProxy = 57AB681F1CF00B6600401ADD /* PBXContainerItemProxy */;
+		};
+		57AB682B1CF00B6600401ADD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57AB680C1CF00B6600401ADD /* Typeform Attendance */;
+			targetProxy = 57AB682A1CF00B6600401ADD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		57AB68161CF00B6600401ADD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57AB68171CF00B6600401ADD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		57AB68301CF00B6600401ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		57AB68311CF00B6600401ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		57AB68331CF00B6600401ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Typeform Attendance/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Victory-Labs.Typeform-Attendance";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		57AB68341CF00B6600401ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Typeform Attendance/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Victory-Labs.Typeform-Attendance";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		57AB68361CF00B6600401ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Typeform AttendanceTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Victory-Labs.Typeform-AttendanceTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Typeform Attendance.app/Contents/MacOS/Typeform Attendance";
+			};
+			name = Debug;
+		};
+		57AB68371CF00B6600401ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Typeform AttendanceTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Victory-Labs.Typeform-AttendanceTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Typeform Attendance.app/Contents/MacOS/Typeform Attendance";
+			};
+			name = Release;
+		};
+		57AB68391CF00B6600401ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Typeform AttendanceUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Victory-Labs.Typeform-AttendanceUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Typeform Attendance";
+			};
+			name = Debug;
+		};
+		57AB683A1CF00B6600401ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Typeform AttendanceUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Victory-Labs.Typeform-AttendanceUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Typeform Attendance";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		57AB68081CF00B6600401ADD /* Build configuration list for PBXProject "Typeform Attendance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57AB68301CF00B6600401ADD /* Debug */,
+				57AB68311CF00B6600401ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57AB68321CF00B6600401ADD /* Build configuration list for PBXNativeTarget "Typeform Attendance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57AB68331CF00B6600401ADD /* Debug */,
+				57AB68341CF00B6600401ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		57AB68351CF00B6600401ADD /* Build configuration list for PBXNativeTarget "Typeform AttendanceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57AB68361CF00B6600401ADD /* Debug */,
+				57AB68371CF00B6600401ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		57AB68381CF00B6600401ADD /* Build configuration list for PBXNativeTarget "Typeform AttendanceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57AB68391CF00B6600401ADD /* Debug */,
+				57AB683A1CF00B6600401ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 57AB68051CF00B6600401ADD /* Project object */;
+}
