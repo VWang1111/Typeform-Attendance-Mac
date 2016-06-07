@@ -24,6 +24,8 @@ class ViewController: NSViewController {
         
         refreshDate.stringValue = dateValue
         
+        Main.retreiveResponses()
+        
     }
     
     @IBAction func apiKeyChanged(sender: NSTextField) {
