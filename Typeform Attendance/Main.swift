@@ -28,8 +28,8 @@ class Main{
     
     static func retreiveResponses(){
         let URL = "https://api.typeform.com/v1/form/" + UIDkey + "?key=" + APIkey + "&completed=true"
-        let rootURL = NSURL(fileURLWithPath: URL)
-        let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: rootURL)
+        let rootURL = NSURL(string: URL)
+        let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: rootURL!)
         let session = NSURLSession.sharedSession()
         
         let task = session.downloadTaskWithRequest(urlRequest) {
@@ -51,6 +51,8 @@ class Main{
                         
                         //Instantiate object from dictionary
                         rootObject = Json4Swift_Base(dictionary: rootDict as! NSDictionary)
+                        
+                        //print(rootObject.responses?.count)
                     }catch {
                         print("Error with Json: \(error)")
                     }
@@ -63,9 +65,6 @@ class Main{
         }
         
         task.resume()
-        
-        
-        print(rootObject.questions?.count)
         
     }
     

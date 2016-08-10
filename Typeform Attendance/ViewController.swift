@@ -59,17 +59,27 @@ class ViewController: NSViewController {
             APIkeyField.stringValue = API ?? ""
             Main.newAPI(APIkeyField.stringValue)
         }
+        else if API != nil{
+            Main.newAPI(API!)
+        }
         
         let UID = defaults.stringForKey("UID")
         if UID != nil && UIDkeyField != nil {
             UIDkeyField.stringValue = UID ?? ""
             Main.newUID(UIDkeyField.stringValue)
         }
+        else if UID != nil{
+            Main.newUID(UID!)
+        }
         
         let numEmail = defaults.integerForKey("numEmail")
         if numEmail != 0 && numEmailField != nil {
             numEmailField.stringValue = String(numEmail)
             let number = Int(numEmailField.stringValue) ?? 0
+            Main.newEmailPerPage(number);
+        }
+        else if numEmail != 0{
+            let number = Int(numEmail) ?? 0
             Main.newEmailPerPage(number);
         }
         
