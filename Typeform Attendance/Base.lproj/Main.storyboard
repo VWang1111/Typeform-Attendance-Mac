@@ -945,6 +945,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="nextPagePressed:" target="43K-zT-8mA" id="jP8-qc-3XZ"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KXT-04-bIy">
                                 <rect key="frame" x="215" y="265" width="150" height="32"/>
@@ -952,6 +955,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="copyToClipboardPressed:" target="43K-zT-8mA" id="2wr-D1-XqN"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eYQ-ZA-akS">
                                 <rect key="frame" x="415" y="275" width="22" height="17"/>
@@ -981,6 +987,9 @@
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="previousPagePressed:" target="43K-zT-8mA" id="hvj-cX-SFQ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <visibilityPriorities>
@@ -1024,7 +1033,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView id="euM-FL-C0q">
+                                                        <tableCellView identifier="FirstNameID" id="euM-FL-C0q">
                                                             <rect key="frame" x="1" y="1" width="75" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
@@ -1056,7 +1065,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView id="CXZ-rY-KX2">
+                                                        <tableCellView identifier="LastNameID" id="CXZ-rY-KX2">
                                                             <rect key="frame" x="78.5" y="1" width="81" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
@@ -1088,7 +1097,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView id="sMT-aL-FWm">
+                                                        <tableCellView identifier="EmailID" id="sMT-aL-FWm">
                                                             <rect key="frame" x="162" y="1" width="284" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
@@ -1127,6 +1136,10 @@
                             </scrollView>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="emailTableView" destination="dZi-ep-Dae" id="1xK-ZJ-sEU"/>
+                        <outlet property="pageNumField" destination="eYQ-ZA-akS" id="qW7-gy-cLg"/>
+                    </connections>
                 </viewController>
                 <customObject id="dbe-ab-uhH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

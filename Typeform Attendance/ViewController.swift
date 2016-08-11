@@ -10,12 +10,15 @@ import Cocoa
 
 class ViewController: NSViewController {
     
+    @IBOutlet weak var emailTableView: NSTableView!
     @IBOutlet weak var attendanceTableView: NSTableView!
     @IBOutlet var APIkeyField: NSTextField!
     @IBOutlet var refreshDate: NSTextField!
     @IBOutlet var UIDkeyField: NSTextField!
     @IBOutlet var numEmailField: NSTextField!
     @IBOutlet weak var averageAttendance: NSTextField!
+    @IBOutlet weak var pageNumField: NSTextField!
+    
     
     @IBAction func refreshButtonPressed(sender: AnyObject) {
         let todaysDate:NSDate = NSDate()
@@ -50,9 +53,54 @@ class ViewController: NSViewController {
         defaults.setInteger(number, forKey: "numEmail")
     }
     
+    @IBAction func copyToClipboardPressed(sender: NSButton){
+        let personList = Main.getEmails(Int(pageNumField.stringValue)!)
+        var clipboard = ""
+        
+        if(personList == nil){
+            return
+        }
+        
+        for person in personList!{
+            clipboard += person.email + ", "
+        }
+        
+        NSPasteboard.generalPasteboard().clearContents()
+        NSPasteboard.generalPasteboard().setString(clipboard, forType: NSPasteboardTypeString)
+    }
+    
+    @IBAction func nextPagePressed(sender: NSButton){
+        let personList = Main.getEmails(Int(pageNumField.stringValue)!+1)
+        
+        if(personList == nil){
+            return
+        }
+        
+        pageNumField.stringValue = String(Int(pageNumField.stringValue)! + 1)
+        
+        emailTableView.reloadData()
+    }
+    
+    @IBAction func previousPagePressed(sender: NSButton){
+        let personList = Main.getEmails(Int(pageNumField.stringValue)!-1)
+        
+        if(personList == nil){
+            return
+        }
+        
+        pageNumField.stringValue = String(Int(pageNumField.stringValue)! - 1)
+        
+        emailTableView.reloadData()
+    }
+    
     override func viewDidAppear() {
+        
         if(attendanceTableView != nil){
             attendanceTableView.reloadData()
+        }
+        
+        if(emailTableView != nil){
+            emailTableView.reloadData()
         }
         
         if(averageAttendance != nil){
@@ -99,6 +147,11 @@ class ViewController: NSViewController {
             attendanceTableView.setDelegate(self);
             attendanceTableView.setDataSource(self);
         }
+        
+        if(emailTableView != nil){
+            emailTableView.setDelegate(self)
+            emailTableView.setDataSource(self)
+        }
     }
 
     override var representedObject: AnyObject? {
@@ -112,8 +165,12 @@ class ViewController: NSViewController {
 
 extension ViewController : NSTableViewDataSource {
     func numberOfRowsInTableView(tableView: NSTableView) -> Int {
-        if(tableView == attendanceTableView){
+        if(attendanceTableView != nil){
             return Main.getAttendance().count
+        }
+        
+        if(emailTableView != nil){
+            return Main.getEmails(Int(pageNumField.stringValue)!)?.count ?? 0
         }
         
         return 0;
@@ -122,35 +179,73 @@ extension ViewController : NSTableViewDataSource {
 
 extension ViewController : NSTableViewDelegate {
     func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        
-        let personList = Main.getAttendance()
+        if(attendanceTableView != nil){
+            let personList = Main.getAttendance()
 
-        var text:String = ""
-        var cellIdentifier: String = ""
-        
-        guard row < personList.count else {
+            var text:String = ""
+            var cellIdentifier: String = ""
+            
+            guard row < personList.count else {
+                return nil
+            }
+            
+            let item = personList[row]
+
+            if tableColumn == tableView.tableColumns[0] {
+                text = item.firstName
+                cellIdentifier = "FirstNameID"
+            } else if tableColumn == tableView.tableColumns[1] {
+                text = item.lastName
+                cellIdentifier = "LastNameID"
+            } else if tableColumn == tableView.tableColumns[2] {
+                text = String(item.meeting)
+                cellIdentifier = "MeetingsAttendedID"
+            } else if tableColumn == tableView.tableColumns[3] {
+                text = item.email
+                cellIdentifier = "EmailID"
+            }
+            
+            if let cell = tableView.makeViewWithIdentifier(cellIdentifier, owner: nil) as? NSTableCellView {
+                cell.textField?.stringValue = text
+                return cell
+            }
+            
             return nil
         }
         
-        let item = personList[row]
-
-        if tableColumn == tableView.tableColumns[0] {
-            text = item.firstName
-            cellIdentifier = "FirstNameID"
-        } else if tableColumn == tableView.tableColumns[1] {
-            text = item.lastName
-            cellIdentifier = "LastNameID"
-        } else if tableColumn == tableView.tableColumns[2] {
-            text = String(item.meeting)
-            cellIdentifier = "MeetingsAttendedID"
-        } else if tableColumn == tableView.tableColumns[3] {
-            text = item.email
-            cellIdentifier = "EmailID"
-        }
-        
-        if let cell = tableView.makeViewWithIdentifier(cellIdentifier, owner: nil) as? NSTableCellView {
-            cell.textField?.stringValue = text
-            return cell
+        if(emailTableView != nil){
+            let personList = Main.getEmails(Int(pageNumField.stringValue)!)
+            
+            if(personList == nil){
+                return nil
+            }
+            
+            var text:String = ""
+            var cellIdentifier: String = ""
+            
+            guard row < personList!.count else {
+                return nil
+            }
+            
+            let item = personList![row]
+            
+            if tableColumn == tableView.tableColumns[0] {
+                text = item.firstName
+                cellIdentifier = "FirstNameID"
+            } else if tableColumn == tableView.tableColumns[1] {
+                text = item.lastName
+                cellIdentifier = "LastNameID"
+            } else if tableColumn == tableView.tableColumns[2] {
+                text = item.email
+                cellIdentifier = "EmailID"
+            }
+            
+            if let cell = tableView.makeViewWithIdentifier(cellIdentifier, owner: nil) as? NSTableCellView {
+                cell.textField?.stringValue = text
+                return cell
+            }
+            
+            return nil
         }
         
         return nil

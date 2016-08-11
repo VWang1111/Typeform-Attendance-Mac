@@ -68,6 +68,43 @@ class Main{
         
     }
     
+    static func getEmails(page: Int) -> [Person]?{
+        var personList = [Person]()
+        
+        if(rootObject.responses == nil){
+            return personList
+        }
+        
+        for Responses in rootObject.responses!{
+            let firstName = Responses.answers?.textfield_21284714 ?? ""
+            let lastName = Responses.answers?.textfield_21284762 ?? ""
+            let email = Responses.answers?.email_21284788 ?? ""
+            let person = Person(firstName: firstName, lastName: lastName, email: email)
+            
+            if(person.email != "" && !personList.contains(person)){
+                personList.append(person)
+            }
+        }
+        
+        let startList = (page-1)*numEmailPerPage
+        var emailForThisPage = numEmailPerPage
+        if(startList >= personList.count || startList < 0){
+            return nil
+        }
+        if(emailForThisPage > personList.count - startList){
+            emailForThisPage = personList.count - startList
+        }
+        var endList = startList + emailForThisPage
+        
+        if(endList > personList.count){
+            endList = personList.count
+        }
+        
+        personList = Array(personList[startList...endList-1])
+        
+        return personList
+    }
+    
     static func getAverageAttendance() -> Int{
         var personList = [Person]()
         
