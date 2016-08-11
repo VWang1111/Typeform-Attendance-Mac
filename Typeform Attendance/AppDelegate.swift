@@ -15,6 +15,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
+        NSApplication.sharedApplication().windows[0].styleMask = NSClosableWindowMask | NSTitledWindowMask | NSMiniaturizableWindowMask
+        
+        let frame = NSApplication.sharedApplication().windows[0]
+        frame.setContentSize(NSSize(width: 450, height: 328))
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
