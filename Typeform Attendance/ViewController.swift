@@ -15,6 +15,7 @@ class ViewController: NSViewController {
     @IBOutlet var refreshDate: NSTextField!
     @IBOutlet var UIDkeyField: NSTextField!
     @IBOutlet var numEmailField: NSTextField!
+    @IBOutlet weak var averageAttendance: NSTextField!
     
     @IBAction func refreshButtonPressed(sender: AnyObject) {
         let todaysDate:NSDate = NSDate()
@@ -27,6 +28,7 @@ class ViewController: NSViewController {
         
         Main.retreiveResponses()
         
+        averageAttendance.stringValue = String(Main.getAverageAttendance())
     }
     
     @IBAction func apiKeyChanged(sender: NSTextField) {
@@ -51,6 +53,10 @@ class ViewController: NSViewController {
     override func viewDidAppear() {
         if(attendanceTableView != nil){
             attendanceTableView.reloadData()
+        }
+        
+        if(averageAttendance != nil){
+            averageAttendance.stringValue = String(Main.getAverageAttendance())
         }
     }
     

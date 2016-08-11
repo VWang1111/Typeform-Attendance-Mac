@@ -746,6 +746,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="averageAttendance" destination="mYf-UD-nS6" id="g3H-Uy-VHt"/>
                         <outlet property="refreshDate" destination="K2k-1q-gzk" id="7kr-sU-373"/>
                     </connections>
                 </viewController>

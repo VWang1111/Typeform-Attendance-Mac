@@ -68,6 +68,50 @@ class Main{
         
     }
     
+    static func getAverageAttendance() -> Int{
+        var personList = [Person]()
+        
+        if(rootObject.responses == nil){
+            return 0
+        }
+        
+        for Responses in rootObject.responses!{
+            let firstName = Responses.answers?.textfield_21284714 ?? ""
+            let lastName = Responses.answers?.textfield_21284762 ?? ""
+            let email = Responses.answers?.email_21284788 ?? ""
+            let person = Person(firstName: firstName, lastName: lastName, email: email)
+            
+            personList.append(person)
+        }
+        
+        var dict = [Person: Int]()
+        
+        for person in personList{
+            let temp = Person(firstName: person.firstName, lastName: person.lastName, email: "")
+            if(dict.indexForKey(temp) != nil){
+                dict[temp] = dict[temp]! + 1;
+            }
+            else{
+                dict[temp] = 1;
+            }
+        }
+        
+        var totalAttendance = 0
+        var maxValue = 0
+        for attendance in dict.values{
+            if(attendance > maxValue){
+                maxValue = attendance
+            }
+            totalAttendance += attendance
+        }
+        
+        if(maxValue == 0){
+            return 0
+        }
+        
+        return totalAttendance/maxValue
+    }
+    
     static func getAttendance() -> [Person]{
         var personList = [Person]()
         
