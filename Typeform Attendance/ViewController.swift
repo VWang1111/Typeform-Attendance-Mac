@@ -95,6 +95,9 @@ class ViewController: NSViewController {
     
     override func viewDidAppear() {
         
+        let frame = NSApplication.sharedApplication().windows[0]
+        frame.title = "Typeform Attendance App"
+        
         if(attendanceTableView != nil){
             attendanceTableView.reloadData()
         }

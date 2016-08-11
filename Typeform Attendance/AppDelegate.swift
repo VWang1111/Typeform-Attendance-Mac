@@ -19,6 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let frame = NSApplication.sharedApplication().windows[0]
         frame.setContentSize(NSSize(width: 450, height: 328))
+        frame.title = "Typeform Attendance App"
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
