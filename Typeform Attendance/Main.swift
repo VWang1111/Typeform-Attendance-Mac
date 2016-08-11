@@ -71,7 +71,7 @@ class Main{
     static func getAttendance() -> [Person]{
         var personList = [Person]()
         
-        if(rootObject.responses?.count == 0){
+        if(rootObject.responses == nil){
             return personList
         }
         
@@ -84,7 +84,37 @@ class Main{
             personList.append(person)
         }
         
+        var dict = [Person: Int]()
         
+        for person in personList{
+            let temp = Person(firstName: person.firstName, lastName: person.lastName, email: "")
+            if(dict.indexForKey(temp) != nil){
+                dict[temp] = dict[temp]! + 1;
+            }
+            else{
+                dict[temp] = 1;
+            }
+        }
+        
+        personList = [Person]()
+        
+        for Responses in rootObject.responses!{
+            let firstName = Responses.answers?.textfield_21284714 ?? ""
+            let lastName = Responses.answers?.textfield_21284762 ?? ""
+            let email = Responses.answers?.email_21284788 ?? ""
+            
+            let temp = Person(firstName: firstName, lastName: lastName, email: "")
+            let person = Person(firstName: firstName, lastName: lastName, email: email, meeting: dict[temp]!)
+            
+            if(personList.contains(temp) && !personList.contains(person)){
+                personList.append(person)
+                personList.removeAtIndex(personList.indexOf(temp)!)
+            }
+            
+            if(!personList.contains(person)){
+                personList.append(person)
+            }
+        }
         
         return personList
     }

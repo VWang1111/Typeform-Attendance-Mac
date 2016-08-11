@@ -24,10 +24,10 @@ class Person: Equatable, Hashable, CustomStringConvertible{
     var hashValue : Int {
         get {
             var hash = 13
-            hash = (hash*7) + firstName.hashValue
-            hash = (hash*7) + lastName.hashValue
-            hash = (hash*7) + email.hashValue
-            hash = (hash*7) + meeting.hashValue
+            hash = (hash&*7) &+ firstName.hashValue
+            hash = (hash&*7) &+ lastName.hashValue
+            hash = (hash&*7) &+ email.hashValue
+            hash = (hash&*7) &+ meeting.hashValue
             return hash
         }
     }

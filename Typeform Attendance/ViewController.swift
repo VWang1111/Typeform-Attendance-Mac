@@ -48,6 +48,11 @@ class ViewController: NSViewController {
         defaults.setInteger(number, forKey: "numEmail")
     }
     
+    override func viewDidAppear() {
+        if(attendanceTableView != nil){
+            attendanceTableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,7 +89,10 @@ class ViewController: NSViewController {
             Main.newEmailPerPage(number);
         }
         
-        
+        if(attendanceTableView != nil){
+            attendanceTableView.setDelegate(self);
+            attendanceTableView.setDataSource(self);
+        }
     }
 
     override var representedObject: AnyObject? {
@@ -98,7 +106,48 @@ class ViewController: NSViewController {
 
 extension ViewController : NSTableViewDataSource {
     func numberOfRowsInTableView(tableView: NSTableView) -> Int {
-        return Main.getAttendance().count;
+        if(tableView == attendanceTableView){
+            return Main.getAttendance().count
+        }
+        
+        return 0;
+    }
+}
+
+extension ViewController : NSTableViewDelegate {
+    func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        
+        let personList = Main.getAttendance()
+
+        var text:String = ""
+        var cellIdentifier: String = ""
+        
+        guard row < personList.count else {
+            return nil
+        }
+        
+        let item = personList[row]
+
+        if tableColumn == tableView.tableColumns[0] {
+            text = item.firstName
+            cellIdentifier = "FirstNameID"
+        } else if tableColumn == tableView.tableColumns[1] {
+            text = item.lastName
+            cellIdentifier = "LastNameID"
+        } else if tableColumn == tableView.tableColumns[2] {
+            text = String(item.meeting)
+            cellIdentifier = "MeetingsAttendedID"
+        } else if tableColumn == tableView.tableColumns[3] {
+            text = item.email
+            cellIdentifier = "EmailID"
+        }
+        
+        if let cell = tableView.makeViewWithIdentifier(cellIdentifier, owner: nil) as? NSTableCellView {
+            cell.textField?.stringValue = text
+            return cell
+        }
+        
+        return nil
     }
 }
 
