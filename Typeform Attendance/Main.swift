@@ -52,7 +52,7 @@ class Main{
                         //Instantiate object from dictionary
                         rootObject = Json4Swift_Base(dictionary: rootDict as! NSDictionary)
                         
-                        //print(rootObject.responses?.count)
+                        //print("Number of responses:" + rootObject.responses?.count)
                     }catch {
                         print("Error with Json: \(error)")
                     }
@@ -66,6 +66,27 @@ class Main{
         
         task.resume()
         
+    }
+    
+    static func getAttendance() -> [Person]{
+        var personList = [Person]()
+        
+        if(rootObject.responses?.count == 0){
+            return personList
+        }
+        
+        for Responses in rootObject.responses!{
+            let firstName = Responses.answers?.textfield_21284714 ?? ""
+            let lastName = Responses.answers?.textfield_21284762 ?? ""
+            let email = Responses.answers?.email_21284788 ?? ""
+            let person = Person(firstName: firstName, lastName: lastName, email: email)
+            
+            personList.append(person)
+        }
+        
+        
+        
+        return personList
     }
     
 }

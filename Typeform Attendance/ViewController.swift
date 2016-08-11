@@ -10,7 +10,8 @@ import Cocoa
 
 class ViewController: NSViewController {
     
-    @IBOutlet var APIkeyField: NSTextFieldCell!
+    @IBOutlet weak var attendanceTableView: NSTableView!
+    @IBOutlet var APIkeyField: NSTextField!
     @IBOutlet var refreshDate: NSTextField!
     @IBOutlet var UIDkeyField: NSTextField!
     @IBOutlet var numEmailField: NSTextField!
@@ -93,5 +94,11 @@ class ViewController: NSViewController {
     }
 
 
+}
+
+extension ViewController : NSTableViewDataSource {
+    func numberOfRowsInTableView(tableView: NSTableView) -> Int {
+        return Main.getAttendance().count;
+    }
 }
 
